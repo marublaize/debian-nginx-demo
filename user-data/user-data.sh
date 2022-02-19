@@ -10,7 +10,7 @@ sudo chmod -v +x /usr/local/bin/docker-compose
 sudo systemctl enable docker.service
 sudo systemctl start docker.service
 
-git clone git@github.com:marublaize/debian-nginx-demo.git
+git clone https://github.com/marublaize/debian-nginx-demo.git
 
 cd debian-nginx-demo
 docker-compose up -d
