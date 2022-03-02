@@ -2,6 +2,7 @@
 
 set -e
 
+export GIT_REPO=https://github.com/marublaize/debian-nginx-demo.git
 export DIRECTORY=debian-nginx-demo
 
 sudo yum update -y
@@ -19,7 +20,7 @@ curl -fsSL -o docker-compose https://github.com/docker/compose/releases/latest/d
 sudo install docker-compose /usr/local/bin/
 
 # Clone the repo
-git clone https://github.com/marublaize/debian-nginx-demo.git
+git clone $GIT_REPO $DIRECTORY
 
-cd ./debian-nginx-demo
+cd ./$DIRECTORY
 sudo $(which docker-compose) up -d
